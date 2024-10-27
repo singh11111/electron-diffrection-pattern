@@ -1,0 +1,129 @@
+/* Main container for the layout */
+.app-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar styles */
+.sidebar {
+  flex: 0 0 10%; /* Sidebar takes 10% width */
+  background-color: #f0f0f0; /* Background color for the sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Home component styles */
+.home {
+  flex: 0 0 90%; /* Home takes 90% width */
+  display: flex;
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Container for left and right sections within Home */
+.container-3 {
+  display: flex;
+  flex: 0 0 50%; /* Container-3 takes 60% width of Home */
+  flex-direction: row; /* Children should be in a row */
+  height: 100%;
+}
+
+/* Container-5 and Container-6 each take up 50% of Container-3's width */
+.container-5, .container-6 {
+  flex: 1; /* Takes up equal space within Container-3 */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Items inside container-5 and container-6 */
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.mainimages {
+  width: 50px;
+  height: auto;
+}
+
+/* Container-4 is 40% of Home's width */
+.container-4 {
+  flex: 0 0 50%; /* Takes up 40% width of Home */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainrightsideimage {
+  width: 100%;
+  height: auto;
+}
+.cubic,.triclinic,.hexagonal,.monoclinic,.orthorhombic,.tetragonal,.trigonal{
+  align-items: center;
+  align-content: center;
+  padding-left: 25%;
+}
+
+/* Container styling: full black background */
+.bcubic-container {
+  position: relative;
+  margin-left: 25%;
+  margin-right: 5%;
+  margin-top: 2px;
+
+  width: 460px;
+  height: 460px;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Styling for each bright point */
+.bright-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white; /* Bright white points */
+  border-radius: 50%; /* Make points circular */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+/* Pulse animation for glowing effect */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+}
+.point-name {
+  position: absolute;
+  left: 15px; /* Offset to the right of the point */
+  top: -10px; /* Slightly above the point */
+  font-size: 12px;
+  color: rgba(80, 187, 34, 0.476);
+  background-color: black; /* Optional: Add background for readability */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+  
